@@ -1,0 +1,89 @@
+@import url("https://fonts.cdnfonts.com/css/google-sans");
+@import url('https://fonts.cdnfonts.com/css/roboto');
+
+* {
+	user-select: none;
+	font-family: "Product Sans";
+}
+p {
+    font-family: Roboto;
+}
+
+body {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+h1.heading {
+	font-weight: 400;
+	font-size: 24px;
+	margin: 0px;
+	padding: 16px 0px 0px 0px;
+}
+p.subheading {
+	font-weight: 400;
+	font-size: 16px;
+	margin: 0px;
+	padding: 7px 0px 0px 0px;
+}
+
+div#mainthing {
+	background-color: #fff;
+	border: 1px solid #dadce0;
+	border-radius: 7px;
+	width: 450px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+@media screen and (max-width: 600px) {
+	div#mainthing {
+		width: 100vw;
+		height: 100vh;
+	}
+}
+
+div.textinput {
+    display: grid;
+    padding: 0px 40px;
+    width: calc(100% - 80px);
+    margin-top: 24px;
+}
+.textinput input.input {
+    grid-column: 1;
+    grid-row: 1;
+    outline: none;
+    border: #dadce0 1px solid;
+    border-radius: 5px;
+    padding: 0px 16px;
+}
+.textinput input.input:focus {
+    border: #1a73e8 2px solid;
+}
+.textinput p.inputtext {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    pointer-events: none;
+    user-select: none;
+    left: 8px;
+    padding: 0px 8px;
+    color: #5f6368;
+    background-color: #fff;
+    width: max-content;
+    transition: .2s all;
+    transform-origin: left center;
+}
+
+.textinput input:focus ~ p.inputtext {
+    color: #1a73e8;
+    transform: scale(0.75) translateY(-39px);
+}
